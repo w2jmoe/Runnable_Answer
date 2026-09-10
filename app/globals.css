@@ -37,7 +37,7 @@ button {
 .prototype-shell {
   position: relative;
   display: grid;
-  grid-template-rows: auto minmax(34rem, 1fr);
+  grid-template-rows: auto minmax(34rem, 1fr) auto;
   gap: 1.25rem;
   min-height: 100vh;
   padding: clamp(1.25rem, 3vw, 2.5rem);
@@ -580,6 +580,34 @@ button {
   color: #d7efff;
 }
 
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0 0.15rem;
+  color: rgba(244, 241, 232, 0.58);
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.site-footer a {
+  color: rgba(244, 241, 232, 0.72);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--ink);
+  outline: none;
+}
+
+.site-footer span {
+  color: rgba(244, 241, 232, 0.35);
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -646,7 +674,7 @@ button {
 
 @media (max-width: 900px) {
   .prototype-shell {
-    grid-template-rows: auto minmax(48rem, 1fr);
+    grid-template-rows: auto minmax(48rem, 1fr) auto;
     gap: 1rem;
     padding-top: 4.2rem;
   }

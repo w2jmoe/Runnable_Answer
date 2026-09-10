@@ -52,6 +52,7 @@ const copy: Record<
     storyAria: string;
     languageLabel: string;
     resetLabel: string;
+    portfolioLabel: string;
   }
 > = {
   en: {
@@ -126,6 +127,7 @@ const copy: Record<
     storyAria: "What changed",
     languageLabel: "Language",
     resetLabel: "Reset",
+    portfolioLabel: "Portfolio",
   },
   zh: {
     taskLabel: "你的任务",
@@ -199,6 +201,7 @@ const copy: Record<
     storyAria: "发生了什么变化",
     languageLabel: "语言",
     resetLabel: "重置",
+    portfolioLabel: "作品集",
   },
 };
 
@@ -501,6 +504,14 @@ export default function Home() {
           </div>
         ) : null}
       </section>
+
+      <footer className="site-footer">
+        <a href="mailto:w2jmoe@gmail.com">w2jmoe@gmail.com</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://w2jmoe.github.io/jay-portfolio" target="_blank" rel="noreferrer">
+          {t.portfolioLabel}
+        </a>
+      </footer>
     </main>
   );
 }
